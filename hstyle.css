@@ -1,0 +1,901 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;600;700&display=swap');
+
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+  }
+
+  /* Banner Section Starts */
+  #banner{
+    background: linear-gradient(rgba(0, 0, 0, 0.2),#060408),url("bridge_sunset.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;  
+    cursor: default;
+  }
+  .logo{
+    width: 60px;
+    position: absolute;
+    top: 4%;
+    left: 2%;
+  }
+  .logo:hover{
+    transform: scale(1.3);
+    transition: 0.6s;
+  }
+  .banner-text{
+    text-align: center;
+    color: white;
+    padding-top: 145px;
+  }
+  .banner-text h1{
+    padding-top: 70px;
+    font-size: 100px;
+    font-family: big daddy st;
+  }
+  .banner-text p{
+    font-size: 23px;
+    font-family: book antiqua;
+    text-decoration: underline;
+  }
+  
+  .banner-btn{
+    margin: 70px auto 0;
+  }
+  
+  .banner-btn a{
+    width: 150px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 10px;
+    padding: 12px 0;
+    color: white;
+    border: .5px solid white;
+    position: relative;
+    z-index: 1;
+    transition: color 0.6s;
+  }
+  
+  .banner-btn a span{
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #c7e9fb;
+    background-image: linear-gradient(315deg, #c7e9fb 0%, #e61d8c 74%);
+    z-index: -1;
+    transition: 0.6s;
+    border-radius: 20px;
+  }
+  
+  .banner-btn a:hover span{
+    width: 100%;
+  }
+  
+  .banner-btn a:hover{
+    color: black;
+    transform: translateZ();
+    border-radius: 20px;
+    transition: 0.6s;
+  }
+  
+
+/* SIDE NAV START*/
+#sideNav{
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    right: -250px;
+    top: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.2),#060408);
+    z-index: 2;
+    transition: 0.4s;
+}
+nav ul li{
+    list-style: none;
+    margin: 40px 20px;
+}
+nav ul li:hover{
+    transition: 0.5s;
+    transform: scale(1.03);
+}
+ nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+nav ul li a:hover{
+    text-decoration: underline;
+    transition: 0.5s;
+    color: #FFD700; 
+}  
+#menuBtn{
+    width: auto;
+    height: auto;
+    background: none;
+    text-align: center;
+    position: fixed;
+    right: 30px;
+    top: 20px;
+    border-radius: 3px;
+    z-index: 3;
+    cursor: pointer;
+}
+#menuBtn img{
+    width: 40px;
+    margin-top: 15px;
+}
+#menuBtn img:hover{
+    transform: translateY(-5px);
+    transition: 0.5s;
+}
+
+@media screen and (max-width: 770px){
+    .banner-text h1{
+      font-size: 44px;
+      font-family: big daddy st;
+    }
+.banner-text a{
+      display: block;
+      margin: 20px auto;
+    }
+}
+/* Banner Section Ends */
+
+
+
+
+
+
+/* what we provide Section Starts (2)*/
+#sec2{
+  padding: 10px;
+  background: #060408;
+  background-size: cover;
+  background-position: center;
+  cursor: default;
+}
+#sec2 .content h1:hover{
+  color: yellow;
+  transition: 0.8s;
+}
+.content h1{
+  font-family: big daddy st;
+  color: white;
+  font-size: 52px;
+  margin-bottom: 60px;
+  text-align: center;
+  cursor: default;
+}
+.content h1:hover{
+  color: yellow;
+  transition: 0.8s;
+}
+.card-holder{
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  flex-wrap: wrap;
+}
+.card{
+  width: 20rem;
+  background-color: rgb(214, 214, 55);
+  color: black;
+  margin: auto;
+}
+.card__name{
+  font-size: 1.7em;
+}
+.card__img{
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+}
+.card-contents{
+  padding: 1rem;
+}
+h1{
+  font-family: Adobe Devanagiri;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+p{
+  font-family: Centaur;
+  font-size: 1.0em;
+  margin-bottom: 1rem;
+}
+.card__read-more{
+  display: block;
+  opacity: 0;
+  height: 0;
+  transition: all 0.5s;
+}
+.card__read-more--open{
+  display: block;
+  opacity: 1;
+  height: 7rem;
+}
+.read-more-btn {
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 1em;
+  letter-spacing: 2px;
+  position: relative;
+  background-color: #16a085;
+  border: none;
+  color: #fff;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  transition-duration: 0.4s;
+  overflow: hidden;
+  box-shadow: 0 5px 15px #193047;
+  border-radius: 4px;
+}
+.read-more-btn:hover {
+  background: #fff;
+  box-shadow: 0px 2px 10px 5px #1abc9c;
+  color: #000;
+}
+
+.read-more-btn:after {
+  content: "";
+  background: #1abc9c;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.read-more-btn:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+.enrollbtn:focus { outline:0; }
+
+/* What we provide Section Ends (2)*/
+
+
+
+
+
+
+
+
+/* Schedule Section Starts (5)*/
+
+  #schedule{
+    padding: 70px;
+    background: #060408;
+    background-size: cover;
+    background-position: center;
+    cursor: default;
+  }
+
+  .container{
+    align-items: center;
+  }
+  .schedule-table {
+    display: table;
+    border: 0;
+    text-align: center;
+  }
+
+  .schedule-table strong,
+  .schedule-table span {
+    display: block;
+    text-align: center;
+  }
+
+  .schedule-table strong {
+    color: white;
+  }
+  .schedule-table strong:hover,.schedule-table span:hover {
+    color: yellow;
+    transition: 1s;
+  }
+
+  .schedule-table span {
+    color: gray;
+  }
+
+  .schedule-table span,
+  .schedule-table small {
+    font-size: 1em;
+    text-transform: uppercase;
+  }
+
+  .schedule-table small {
+    position: relative;
+    top: 10px;
+  }
+
+  .table .thead-light th,
+  .schedule-table tr td:first-child {
+    background: yellow;
+    border: 1px solid #212122;
+    color: black;
+  }
+
+  .schedule-table .thead-light th {
+    border-bottom: 0;
+    text-transform: uppercase;
+  }
+
+  .table-bordered td, 
+  .table-bordered th {
+    border: 1px solid #212122;
+  }
+
+  .table-bordered td {
+    padding-bottom: 22px;
+  }
+
+  .table td, .table th {
+    padding: 1rem;
+  }
+
+/** Schedule section ends (5)**/
+
+
+
+
+
+
+
+
+/** testimonial section (6)**/
+#sec6{
+  padding: 40px;
+  background: #060408;
+  background-size: cover;
+  background-position: center;
+  cursor: default;
+}
+.testimonial {
+  margin-top: 30px;
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 30px;
+}
+.testimonial_Carousel .carousel-caption {
+  position: inherit;
+  padding: 0;
+}
+
+.testimonial_box {
+  text-align: center;
+}
+
+.test_box {
+  padding: 30px 25px;
+  background-color: yellow;
+}
+
+.testimonial_Carousel .test_box h4 {
+  font-family: book antiqua;
+  font-size: 17px;
+  color: black;
+  line-height: 18px;
+  display: block;
+  text-align: left;
+  float: left;
+  font-weight: bolder;
+  padding: 0;
+  padding-top: 8px;
+}
+
+.testimonial_Carousel .test_box i {
+  font-size: 17px;
+  line-height: 28px;
+  text-align: right;
+  display: block;
+}
+
+.testimonial_Carousel .test_box p {
+  font-family: lucida bright;
+  font-size: 14px;
+  line-height: 28px;
+  color: black;
+  text-align: left;
+  padding-top: 20px;
+}
+
+.testimonial_Carousel .carousel-indicators {
+  bottom: -50px;
+}
+
+.testimonial_Carousel .carousel-indicators li {
+  width: 20px;
+  height: 20px;
+  background: #262e31;
+  border-radius: 10px;
+}
+
+.testimonial_Carousel .carousel-indicators li.active {
+  background: yellow;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  display: none;
+}
+/** end testimonial section (6)**/
+
+
+
+
+
+
+
+
+/* CollegeEvents Section Starts (3)*/
+#sec3{
+  padding: 40px;
+  background: #060408;
+  background-size: cover;
+  background-position: center;
+  cursor: default;
+}
+
+.card-contents h1{
+  font-family: book antiqua;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+.card-contents p{
+  font-family: lucida bright;
+  font-size: 0.8em;
+  margin-bottom: 1rem;
+}
+.card-contents .evesp{
+  font-weight: bolder;
+}
+.enrollbtn {
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 1em;
+  letter-spacing: 2px;
+  position: relative;
+  background-color: #1624a0;
+  border: none;
+  color: #fff;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  transition-duration: 0.4s;
+  overflow: hidden;
+  box-shadow: 0 5px 15px #193047;
+  border-radius: 4px;
+}
+.enrollbtn:hover {
+  background: #fff;
+  box-shadow: 0px 2px 10px 5px #1624a0;
+  color: #000;
+}
+.enrollbtn:after {
+  content: "";
+  background: #1624a0;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+.enrollbtn:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+/* CollegeEvents Section Ends (3)*/
+
+
+
+
+
+
+/* Our Team Section Starts (7)*/
+#ourteam{
+  padding: 40px;
+  background: #060408;
+  background-size: cover;
+  background-position: center;
+  cursor: default;
+}
+.wrapper{
+  margin-top: 5%;
+}
+.team{
+  display: flex;
+  text-align: center;
+  width: auto;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.team .team_members{
+  background: #fff;
+  margin: 5px;
+  margin-bottom: 20px;
+  width: 300px;
+  padding: 20px;
+  line-height: 20px;
+  color: rgb(88, 87, 87);
+  position: relative;
+  border: 4px solid yellow;
+  border-radius: 1em;
+  margin-right: 50px;
+}
+.team .team_members:hover{
+  border-radius: 3em;
+  transition: 2s;
+  color: black;
+}
+.team .team_members:hover{
+  background: lightgray;
+  transition: 0.5s;
+}
+.team .team_members h3{
+  font-family: book antiqua;
+  color: #6514d1;
+  font-size: 26px;
+  margin-top: 50px;
+}
+.team .team_members p.role{
+  color: rgb(88, 87, 87);
+  font-size: 12px;
+  text-transform: uppercase;
+  margin: 12px 0;
+}
+.team .team_members .team_img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.team .team_members .team_img img{
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+}
+@media(max-width: 991px){
+  footer{
+    padding: 40px;
+  }
+  footer .foot{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media(max-width: 768px){
+  footer .foot{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* Our Team Section Ends(7) */
+
+
+
+/* Important Event Section Starts*/
+#sec7{
+  padding: 40px;
+  background: #060408;
+  background-size: cover;
+  background-position: center;
+  cursor: default;
+}
+.event-container {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.event-container h3.year {
+  font-size: 40px;
+  text-align: center;
+  border-bottom: 5px solid white;
+}
+.event-container .event {
+  box-shadow: 0 4px 16px -8px rgba(0, 0, 0, 0.4);
+  display: flex;
+  border-radius: 8px;
+  margin: 32px 0;
+}
+.event .event-left {
+  background: yellow;
+  min-width: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  padding: 8px 60px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 8px 0 0 8px;
+}
+.event .event-left .date {
+  font-size: 56px;
+}
+.event .event-left .month {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.event .event-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 24px;
+}
+.event .event-right a{
+  text-decoration: none;
+}
+.event .event-right h3.event-title {
+  font-family: book antiqua;
+  font-size: 24px;
+  margin: 24px 0 10px 0;
+  color: white;
+  cursor: pointer;
+}
+.event .event-right h3.event-title:hover{
+  color: yellow;
+  transition: 1s;
+}
+.event-description{
+  font-family: lucida bright;
+  opacity: 0.8;
+}
+.event .event-right .event-timing {
+  background: yellow;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  padding: 8px;
+  border-radius: 16px;
+  margin: 24px 0;
+  font-size: 14px;
+}
+
+
+@media (max-width: 550px) {
+  .event {
+    flex-direction: column;
+  }
+
+  .event .event-left {
+    padding: 0;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .event .event-left .event-date .date,
+  .event .event-left .event-date .month {
+    display: inline-block;
+    font-size: 24px;
+  }
+
+  .event .event-left .event-date {
+    padding: 10px 0;
+  }
+}
+/* Important Events Section Ends (7)*/
+
+
+
+/* Footer Section Starts (8)*/
+#last{
+  padding: 40px;
+  display: grid;
+  justify-content: end;
+  align-content: end;
+  min-height: auto;
+  background: #060408;
+  background-size: cover;
+  background-position: center;
+  cursor: default;
+}
+
+footer{
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 20px 100px;
+}
+footer .foot{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+}
+footer .foot .sec h2{
+  position: relative;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+footer .foot .sec h2:hover{
+  color: yellow;
+  transition: 1s;
+}
+footer .foot .sec h2::before{
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width:  50px;
+  height: 2px;
+  background: linear-gradient(rgba(255,255,255,255.0),#ffd700);
+}
+footer .foot .sec p{
+  color: #fff;
+}
+.quicklinks{
+  position: relative;
+}
+.quicklinks li{
+  list-style: none;
+}
+.quicklinks li a{
+  color: white;
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.quicklinks li a:hover{
+  color: #ffd700;
+}
+.info{
+  position: relative;
+}
+.info li{
+  display: grid;
+  grid-auto-columns: 30px 1 fr;
+  margin-bottom: 16px;
+}
+.info li span:nth-child(1){
+  color: #fff;
+  font-size: 20px;
+}
+.info li span{
+  color: #fff;
+}
+.info a{
+  color: #fff;
+  text-decoration: none;
+}
+.info a:hover{
+  color: #FFD700;
+}
+.copyrightText{
+  text-decoration: underline white ;
+  width: 100%;
+  padding: 8px 100px;
+  text-align: center;
+  color: white;
+}
+.copyrightText:hover{
+  color: yellow;
+  transition: 1s;
+
+}
+/* Footer Section Ends(7)*/
+
+
+
+
+/*How to Enroll Section Starts (8)*/
+#sec8{
+  padding: 40px;
+  background: #060408;
+  background-size: cover;
+  background-position: center;
+}
+.rule { 
+  padding-left: 5rem;
+}
+
+.rule .list .num {
+  padding: 0.1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  transition: 0.25s;
+}
+.rule .list .num:nth-child(0):before {
+  content: '0';
+  font-size: 4rem;
+  font-weight: bold;
+  color: white;
+  width: 2rem;
+  opacity: 0.05;
+  transition: 0.25s;
+}
+.rule .list .num:nth-child(1):before {
+  content: '1';
+  font-size: 4rem;
+  font-weight: bold;
+  color: white;
+  width: 2rem;
+  opacity: 0.05;
+  transition: 0.25s;
+}
+.rule .list .num:nth-child(2):before {
+  content: '2';
+  font-size: 4rem;
+  font-weight: bold;
+  color: white;
+  width: 2rem;
+  opacity: 0.05;
+  transition: 0.25s;
+}
+.rule .list .num:nth-child(3):before {
+  content: '3';
+  font-size: 4rem;
+  font-weight: bold;
+  color: white;
+  width: 2rem;
+  opacity: 0.05;
+  transition: 0.25s;
+}
+.rule .list .num:nth-child(4):before {
+  content: '4';
+  font-size: 4rem;
+  font-weight: bold;
+  color: white;
+  width: 2rem;
+  opacity: 0.05;
+  transition: 0.25s;
+}
+.rule .list .num:nth-child(5):before {
+  content: '5';
+  font-size: 4rem;
+  font-weight: bold;
+  color: white;
+  width: 2rem;
+  opacity: 0.05;
+  transition: 0.25s;
+}
+.rule .list .num h3 {
+  position: relative;
+  font-family: lucida bright;
+  left: -1.5rem;
+  color: white;
+  font-size: 1rem;
+  transition: 0.25s;
+}
+.rule .list .num h3 span{
+  color: yellow;
+}
+.rule .list .num:hover {
+  cursor: pointer;
+}
+.rule .list .num:hover:before {
+  opacity: 0.8;
+  color: white  ;
+}
+.rule .list .num:hover h3 {
+  left: 1rem;
+  color: yellow;
+}
+/*How to Enroll Section Ends(8)*/
